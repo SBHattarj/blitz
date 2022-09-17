@@ -3,6 +3,8 @@ import c from "chalk"
 import {Table} from "console-table-printer"
 import ora from "ora"
 import readline from "readline"
+import debugFnc from "debug"
+
 
 export type LogLevel = "trace" | "debug" | "info" | "warn" | "error" | "fatal"
 
@@ -175,7 +177,7 @@ const variable = (val: any) => {
  * If the DEBUG env var is set this will write to the console
  * @param str msg
  */
-const debug = require("debug")("blitz")
+const debug = debugFnc("blitz")
 
 export const log = {
   withBrand,
